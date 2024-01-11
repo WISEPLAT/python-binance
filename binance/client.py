@@ -1061,7 +1061,7 @@ class Client(BaseClient):
             # sleep after every 3rd call to be kind to the API
             idx += 1
             if idx % 3 == 0:
-                time.sleep(1)
+                time.sleep(0.1)
 
         return output_data
 
@@ -1161,7 +1161,7 @@ class Client(BaseClient):
             # sleep after every 3rd call to be kind to the API
             idx += 1
             if idx % 3 == 0:
-                time.sleep(1)
+                time.sleep(0.1)
 
     def get_avg_price(self, **params):
         """Current average price for a symbol.
@@ -8472,7 +8472,7 @@ class AsyncClient(BaseClient):
             # sleep after every 3rd call to be kind to the API
             idx += 1
             if idx % 3 == 0:
-                await asyncio.sleep(1)
+                await asyncio.sleep(0.1)
 
         return output_data
     _historical_klines.__doc__ = Client._historical_klines.__doc__
@@ -8536,7 +8536,7 @@ class AsyncClient(BaseClient):
             # sleep after every 3rd call to be kind to the API
             idx += 1
             if idx % 3 == 0:
-                await asyncio.sleep(1)
+                await asyncio.sleep(0.1)
     _historical_klines_generator.__doc__ = Client._historical_klines_generator.__doc__
 
     async def get_avg_price(self, **params):
